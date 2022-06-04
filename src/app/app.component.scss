@@ -1,0 +1,47 @@
+$white: #F7F7F7;
+$black: #000000;
+
+:host {
+    display: grid;
+    grid-template-rows: min-content auto min-content;
+
+    color: $black;
+}
+
+.search-bar {
+    margin: 50px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.card-list {
+    height: 500px;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+
+    margin: 0 20px;
+
+    .card {
+        display: grid;
+        grid-template-rows: auto min-content;
+        row-gap: 10px;
+        color: $white;
+
+        padding: 20px;
+        background-color: $black;
+        transition: transform .2s;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.02);
+        }
+    }
+}
+
+.copied-msg {
+    margin: 20px;
+    justify-self: center;
+}

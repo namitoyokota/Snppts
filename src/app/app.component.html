@@ -1,0 +1,13 @@
+<!-- Search Bar -->
+<input class="search-bar" active type="text" />
+
+<!-- Code Snippets -->
+<div class="card-list">
+	<div class="card" *ngFor="let snippet of snippets" (click)="copy(snippet)">
+		{{snippet.code}}
+	</div>
+</div>
+
+<div class="copied-msg" *ngIf="copied">
+	Snippet copied :)
+</div>
